@@ -19,8 +19,8 @@ $CFG->dboptions = array (
 );
 
 $CFG->wwwroot   = 'http://sman2batanganai.site/';
-$CFG->dataroot  = 'http://sman2batanganai.site/moodledata';
-// $CFG->dataroot  = 'C:\\xampp\\moodledata';
+// $CFG->dataroot  = 'http://sman2batanganai.site/moodledata';
+$CFG->dataroot  = '/home/barw9725/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
