@@ -1,0 +1,366 @@
+// Bootstrap variables
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #f7f7f9 !default;
+$gray-300: #eceeef !default;
+$gray-400: #ced4da !default;
+$gray-500: #aaa !default;
+$gray-600: #888 !default;
+$gray-700: #5a5a5a !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #FF7851 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #FFCE67 !default;
+$green:   #56CC9D !default;
+$teal:    #20c997 !default;
+$cyan:    #6CC3D5 !default;
+
+$primary:       #78C2AD !default;
+$secondary:     #F3969A !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+// Custom
+$bodybgcolor: #f0f0f0 !default;
+$border-radius: 25px !default;
+$cardsbgcolor: #fdfdfd !default;
+$foterbgcolor: $primary !default;
+$drawerbgcolor: #f0f0f0 !default;
+
+// Options
+$enable-rounded: true !default;
+
+// Body
+$body-color:    $gray-800 !default;
+
+// Fonts
+$font-size-base: 0.9375rem !default;
+$headings-font-weight:   300 !default;
+
+// Navbar
+$navbar-dark-hover-color:           rgba($white, 1) !default;
+$navbar-light-hover-color:          rgba($black, .9) !default;
+
+// Breadcrumbs
+$breadcrumb-padding-y:              .25rem !default;
+$breadcrumb-padding-x:              0 !default;
+$breadcrumb-item-padding:           .5rem !default;
+$breadcrumb-margin-bottom:          0 !default;
+$breadcrumb-bg:                     transparent !default;
+$breadcrumb-divider: "/" !default;
+$breadcrumb-divider-rtl: "/" !default;
+
+// Alerts
+$alert-border-width:                0 !default;
+
+$card-group-margin: .25rem;
+
+$theme-colors: (
+    primary: $primary,
+    secondary: $gray-400,
+    success: $success,
+    info: $info,
+    warning: $orange,
+    danger: $danger,
+    light: $gray-100,
+    dark: $gray-800
+);
+
+// Import FontAwesome.
+@import "fontawesome";
+
+// Import All of Bootstrap
+@import "bootstrap";
+
+// Import Core moodle CSS
+@import "moodle";
+
+// Preset CSS
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: $bodybgcolor;
+}
+
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+}
+
+.filemanager-container,
+.filepicker-filelist {
+    @extend .border;
+}
+
+// Rounded user pictures
+.userpicture {
+    border-radius: 50%;
+}
+
+// Reset the default styling back to the bootstrap defaults for
+// the secondary outline button because gray-200 is much too light
+// for an outline button.
+.btn-outline-secondary {
+    @include button-outline-variant($gray-600);
+    border-color: $border-color;
+}
+
+
+
+
+// Changes
+
+
+.btn-sm, .btn-group-sm > .btn, #page-grade-grading-manage .actions .btn-group-sm > .action, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel .btn-group-sm > input, #rubric-rubric.gradingform_rubric .btn-group-sm > .addcriterion {
+    border-radius: 25px; 
+}
+
+.dropdown-item {
+    border-radius: 15px; }
+
+.card, #page-enrol-users #filterform, .que .history, .userprofile .profile_tree section, .groupinfobox, .well {
+    background-color: none; 
+    border: none; 
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.59);
+    -moz-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.59);
+    box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.59); }
+
+.card-body, .userprofile .profile_tree section{
+    border-radius: 25px;
+    background-color: $cardsbgcolor;
+    border: none; }
+
+.card {
+    background-color: $cardsbgcolor;
+}
+
+.border-0 {
+    border: 0 !important;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+    box-shadow: none; }
+
+.bg-transparent .card-body{
+    border: 0;
+    background-color: transparent !important
+}
+
+#region-main {
+    border-radius: 25px;
+    background-color: $cardsbgcolor; }
+
+.filepicker-filelist .filepicker-container,
+.filemanager.fm-noitems .fm-empty-container {
+   border-radius: 25px; }
+
+   .modal-content, .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content{
+       border-radius: 25px; }
+
+
+#page-wrapper #page #page-content {
+    border-radius: 25px; }
+
+#page-my-index{
+    background-color: $bodybgcolor;
+    }
+
+ a{
+    color: $primary;
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+:not(th) > a:hover{
+  font-weight: 400;
+}
+
+#page-footer{
+        background-color: $foterbgcolor;
+}
+
+#nav-drawer{
+    background-color:  $drawerbgcolor;
+    padding: 18px 20px;
+}
+
+#nav-drawer div.list-group-item{
+    color: grey;
+}
+
+.sm-font .btn {
+    font-size: 0.8rem;
+}
+
+.pagelayout-mydashboard #region-main-box{
+    padding: 18px;
+}
+
+.pagelayout-veloxnet-dashboard #region-main-box {
+    padding: 18px;
+}
+
+.pagelayout-veloxnet-dashboard #region-main {
+    border: 0;
+    padding: 0;
+    background-color: transparent !important;
+}
+
+.block button.dropdown-toggle {
+    background-color: $primary;
+    color: #fdfdfd;
+    box-shadow: none;
+
+}
+
+.block {
+    margin: 1px
+}
+
+section.node-category {
+    margin: 2px
+}
+
+.block .show>.btn-outline-secondary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.block .dropdown-item:focus{
+    background-color: $primary;
+    color: white;
+}
+
+.vxg-block-header {
+    background-color: $primary;
+    color: white;
+}
+
+.vxg-block-header h5 {
+    font-weight: 600;
+}
+
+.vxg-block-header .icon {
+    color: white;
+}
+
+.vxg-block-header .icon {
+    color: white;
+}
+
+.vxg-block-header .dropdown-toggle::after {
+    color: white;
+}
+
+
+[aria-controls=nav-drawer] {
+    background-color: $primary;
+    color: white;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-primary:hover {
+    color: white;
+}
+
+
+.btn-danger{
+    color:white;
+}
+
+.btn-danger:hover{
+    color:white;
+}
+
+.btn-info{
+    color:white;
+}
+
+.btn-info:hover{
+    color:white;
+}
+
+
+
+.change-modal-trigger button{
+    background-color: $primary;
+    color: white;
+}
+
+.change-modal-trigger button:hover{
+    background-color: $primary;
+    color: white;
+}
+
+.change-modal-trigger button:focus{
+    background-color: $primary;
+    color: white;
+}
+
+.change-modal-trigger button:active{
+    background-color: $primary;
+    color: white;
+}
+
+#page-wrapper::after {
+    content: "";
+    display: none;
+    min-height: 130px;
+}
+
+/* 3.5*/ 
+#page-wrapper {
+    min-height: 100%;
+    padding-bottom: none;
+    margin-bottom: -130px;
+}
+
+#page-wrapper::after {
+    content: "";
+    display: none;
+    min-height: 130px;
+}
+
+#page-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+#page-wrapper #page {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#page-wrapper #page #page-content {
+    flex: 1 0 auto
+}
+
+#page-wrapper #page-footer {
+    flex-shrink: 0
+}
+
+#region-main{
+    padding: 1.2rem;
+}

@@ -1,0 +1,86 @@
+// Post SCSS for the theme.
+
+    /* If the setting footerhidehelplink is enabled, then hide the helplink. */
+    @if variable-exists(footerhidehelplink) {
+        @if $footerhidehelplink == 'yes' {
+            .helplink {
+                display: none;
+            }
+        }
+    }
+
+    /* If the setting footerhidelogininfo is enabled, then hide the logininfo. */
+    @if variable-exists(footerhidelogininfo) {
+        @if $footerhidelogininfo == 'yes' {
+            .logininfo {
+                display: none;
+            }
+        }
+    }
+
+    /* If the setting footerhidehomelink is enabled, then hide the homelink. */
+    @if variable-exists(footerhidehomelink) {
+        @if $footerhidehomelink == 'yes' {
+            .homelink {
+                display: none;
+            }
+        }
+    }
+
+    /* If the setting footerhideusertourslink is enabled, then hide the link to reset the user tour. */
+    @if variable-exists(footerhideusertourslink) {
+        @if $footerhideusertourslink == 'yes' {
+            .tool_usertours-resettourcontainer {
+                display: none;
+            }
+        }
+    }
+
+    @if variable-exists(footerhidetooldataprivacy) {
+        @if $footerhidetooldataprivacy == 'yes' {
+            .tool_dataprivacy {
+                display: none;
+            }
+        }
+    }
+
+
+    @if variable-exists(footerhidewhole) {
+        @if $footerhidewhole == 'yes' {
+            #page-footer {
+                display: none;
+            }
+        }
+    }
+
+// drawe styles
+
+
+@if variable-exists(drawerstyle) {
+    @if $drawerstyle == 'onlyicons' {
+        #nav-drawer .list-group-item .media-body{
+            display: none; }
+        #nav-drawer .list-group-item .media-left .icon{
+            font-size: 18px;}
+
+        #nav-drawer{
+            width: 100px;}
+
+        body.drawer-open-left {
+            margin-left: 100px;}
+
+        [data-region="drawer"] {
+            overflow-y: overlay;}
+
+        #nav-drawer .list-group-item div{
+            margin-left: 0!important;}
+
+    }
+}
+
+
+    
+
+
+
+    
