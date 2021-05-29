@@ -1,0 +1,4 @@
+a:3:{s:20:"multilangupgradeinfo";s:318:"<p>Sintaks filter multi bahasa diubah di 1.8 dan begitu juga
+ &lt;lang&gt; tag tidak didukung lagi.</p>
+<p>Contohnya: &lt;span lang="en" class="multilang"&gt;Hello!&lt;/span&gt;&lt;span lang="es" class="multilang"&gt;Hola!&lt;/span&gt;</p>
+<p>Apakah Anda ingin meningkatkan sintaks di semua teks yang ada sekarang?</p>";s:10:"pluginname";s:24:"Peningkatan multi bahasa";s:16:"privacy:metadata";s:70:"Pengaya peningkatan multi bahasa tidak menyimpan data pribadi apa pun.";}
